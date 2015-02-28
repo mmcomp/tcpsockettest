@@ -1,0 +1,65 @@
+.button ,.list-block,.item-title{
+    overflow: visible !important;
+}
+i.icon.icon-tick{
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/greentick.png);
+}
+i.icon.icon-cross{
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/redcross.png);
+}
+i.icon.icon-flight{
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/flight.png);
+}
+.badge{
+    padding: 6px 10px !important;
+}
+.hs-margin-right{
+    margin-right: 10px;
+}
+.page{
+    margin-top: 15px !important;
+}
+.hs-red{
+    color:#ff3b30;
+}
+.hs-margin-top-down{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hs-font120{
+    font-size: 120%;
+}
+.hs-highlight{
+    background-color: #ffcc00;/*#4cd964;*/
+}
+.hs-toolbar{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 64px;
+    z-index: 500;
+}
+.hs-circle{
+    border: solid 2px #fff;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    box-shadow: 0px 0px 2px 2px #888888;
+}
+.hs-circle img{
+    margin-top: 12px;
+}
+.err{
+    padding-right: 22px;
+    background-color: #ff3b30;
+    color: #fff;
+    margin-left: auto;
+    border-radius: 7px;
+}
