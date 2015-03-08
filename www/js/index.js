@@ -20,7 +20,8 @@ function readFromFile(fn){
 		fileSystem.root.getFile("log_send.txt", {create: true}, function(fileEntry){
 			fileEntry.file(function(file){
 				//readDataUrl(file);
-				readAsText(file,fn);
+				//readAsText(file,fn);
+                                readFile(file,fn);
 			},fail);
 		}, fail);
 	}, fail);
@@ -45,6 +46,18 @@ function readAsText(file,fn) {
 	};
 	reader.readAsText(file);
 }
+function readFile(file,fn) {
+	var reader = new FileReader();
+	reader.onloadend = function(evt) {
+	    console.log("Read as text");
+            var ab = evt.target.result;
+            var ia = new Uint8Array(ab);
+	    console.log(ia);
+	    if(typeof fn === 'function')
+	        fn(ia);
+	};
+	reader.readAsArrayBuffer(file);
+}
 function saveToFile(data,fn){
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem){
 		fileSystem.root.getFile("log_recive.txt", {create: true}, function(fileEntry){
@@ -54,7 +67,6 @@ function saveToFile(data,fn){
 				    if(typeof fn === 'function')
 					fn();
 				};
-
 				writer.write(data);
 				writer.abort();
 				// contents of file now 'some different text'
@@ -117,7 +129,20 @@ function send(id) {
 function sendFromFile()
 {
 	readFromFile(function(data){
-		window.tlantic.plugins.socket.send(stub, stub, key, data);
+            /*
+            var dt = '';
+            for(var i = 0;i < data.length;i++)
+            {
+                dt += String.fromCharCode(data[i]);
+            }
+            console.log(dt);
+            */
+            //var stringdata = String.fromCharCode.apply(null, data);
+            var stringdata = '';//data.join(',');
+            for(var i = 0;i < data.length;i++)
+                stringdata += ((i>0)?',':'')+String(data[i]);
+            console.log(stringdata);
+            window.tlantic.plugins.socket.send(stub, stub, key, stringdata);
 	});
 }
 function disconnect() {

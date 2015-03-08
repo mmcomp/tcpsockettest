@@ -23,6 +23,7 @@
 /home/hscomp/cordova_prj/tcpsockettest/platforms/android/assets/www/js/index.js \
 /home/hscomp/cordova_prj/tcpsockettest/platforms/android/assets/www/js/jquery-2.1.3.min.js \
 /home/hscomp/cordova_prj/tcpsockettest/platforms/android/assets/www/js/framework7.min.js \
+/home/hscomp/cordova_prj/tcpsockettest/platforms/android/assets/www/js/db.js \
 /home/hscomp/cordova_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket \
 /home/hscomp/cordova_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file \
 /home/hscomp/cordova_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket/www \
