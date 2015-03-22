@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.OutputStream;
+import java.io.ByteArrayOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -20,11 +22,11 @@ public class Connection extends Thread {
 	private Socket callbackSocket;
 	private PrintWriter writer;
 	private BufferedReader reader;
-
+	private OutputStream os;
 	private Boolean mustClose;
 	private String host;
 	private int port;
-
+	private ByteArrayOutputStream bos;
 
 	/**
 	 * Creates a TCP socket connection object.
@@ -99,6 +101,24 @@ public class Connection extends Thread {
 		this.writer.println(data);
 	}
 
+	/**
+	 * Writes No Enter on socket output stream to send data to target host.
+	 * 
+	 * @param data information to be sent
+	 */
+	public void writeNoEnter(String data) {
+		this.writer.print(data);
+//		this.writer.println("");
+/*
+		byte[] myvar = "Any String you want".getBytes();
+		byte[] b = new byte[2];
+		b[0] = 1;
+		b[1] = 2;
+//		os.write(myvar);
+		bos.write(myvar);
+*/
+	}
+
 
 
 	/* (non-Javadoc)
@@ -112,7 +132,8 @@ public class Connection extends Thread {
 			this.callbackSocket = new Socket(this.host, this.port);
 			this.writer = new PrintWriter(this.callbackSocket.getOutputStream(), true);
 			this.reader = new BufferedReader(new InputStreamReader(callbackSocket.getInputStream()));
-
+//			this.os = this.callbackSocket.getOutputStream();
+//			ByteArrayOutputStream bos = (ByteArrayOutputStream)os;
 			// receiving data chunk
 			while(!this.mustClose){
 

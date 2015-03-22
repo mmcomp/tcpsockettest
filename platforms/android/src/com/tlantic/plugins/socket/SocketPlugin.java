@@ -39,6 +39,10 @@ public class SocketPlugin extends CordovaPlugin {
 			this.isConnected(args, callbackContext);
 			return true;
 			
+		}else if(action.equals("sendNoEnter")) {
+			this.sendNoEnter(args, callbackContext);
+			return true;
+
 		}else if(action.equals("send")) {
 			this.send(args, callbackContext);
 			return true;
@@ -181,6 +185,52 @@ public class SocketPlugin extends CordovaPlugin {
 				
 					// write on output stream
 					socket.write(data);
+					
+					// ending send process
+					callbackContext.success();	
+				}
+								
+			} catch (JSONException e) {
+				callbackContext.error("Unexpected error sending information: " + e.getMessage());
+			}
+		}
+	}
+
+	/**
+	 * Send information with out Enter to target host
+	 * 
+	 * @param args
+	 * @param callbackContext
+	 */
+	private void sendNoEnter(JSONArray args, CallbackContext callbackContext) {
+		Connection socket;
+		
+		// validating parameters
+		if (args.length() < 2) {
+			callbackContext.error("Missing arguments when calling 'send' action.");
+		} else {
+			try {
+				// retrieving parameters
+				String key = args.getString(0);
+				String data = args.getString(1);
+				
+				// getting socket
+				socket = this.pool.get(key);
+				
+				// checking if socket was not found and his connectivity
+				if (socket == null) {
+					callbackContext.error("No connection found with host " + key);
+				
+				} else if (!socket.isConnected()) {
+					callbackContext.error("Invalid connection with host " + key);
+				
+				} else if (data.length() == 0) {
+					callbackContext.error("Cannot send empty data to " + key);
+				
+				} else {
+				
+					// write on output stream
+					socket.writeNoEnter(data);
 					
 					// ending send process
 					callbackContext.success();	

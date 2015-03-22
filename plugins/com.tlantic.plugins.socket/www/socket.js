@@ -40,6 +40,12 @@ Socket.prototype.send = function (successCallback, errorCallback, connectionId, 
 };
 
 //
+Socket.prototype.sendNoEnter = function (successCallback, errorCallback, connectionId, data) {
+    'use strict';
+    exec(successCallback, errorCallback, this.pluginRef, 'sendNoEnter', [connectionId, typeof data == 'string' ? data : JSON.stringify(data)]);
+};
+
+//
 Socket.prototype.receive = function (host, port, connectionId, chunk) {
     'use strict';
 

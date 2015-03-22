@@ -118,6 +118,16 @@ function hexToSend(inp){
     console.log('out = ',out);
     return(out);
 }
+function newSend(dt)
+{
+    var tt='';
+    //dt=[65,65];
+    for(var i in dt)
+    {
+        tt+=String.fromCharCode(dt[i]);
+    }    
+    window.tlantic.plugins.socket.sendNoEnter(stub, stub, key, tt);
+}
 function send(id) {
     data = $('#cmd'+id).val().trim();
     //if($("#is_hex").prop('checked')===true)
@@ -138,11 +148,12 @@ function sendFromFile()
             console.log(dt);
             */
             //var stringdata = String.fromCharCode.apply(null, data);
-            var stringdata = '';//data.join(',');
-            for(var i = 0;i < data.length;i++)
-                stringdata += ((i>0)?',':'')+String(data[i]);
-            console.log(stringdata);
-            window.tlantic.plugins.socket.send(stub, stub, key, stringdata);
+            //var stringdata = '';//data.join(',');
+            //for(var i = 0;i < data.length;i++)
+                //stringdata += ((i>0)?',':'')+String(data[i]);
+            //console.log(stringdata);
+            //window.tlantic.plugins.socket.send(stub, stub, key, data);
+            newSend(data);
 	});
 }
 function disconnect() {
