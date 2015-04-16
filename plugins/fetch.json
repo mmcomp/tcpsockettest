@@ -1,0 +1,8 @@
+{
+    "com.matd.coolplugin": {
+        "source": {
+            "type": "local",
+            "path": "/home/mehrdad/and_prj/plugins/CoolPlugin"
+        }
+    }
+}

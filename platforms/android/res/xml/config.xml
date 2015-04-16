@@ -11,6 +11,9 @@
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="CoolPlugin">
+        <param name="android-package" value="CoolPlugin" />
+    </feature>
     <name>TcpSocketTest</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

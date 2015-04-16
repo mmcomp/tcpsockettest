@@ -24,9 +24,12 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/index.css \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/framework7.rtl.min.css \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.matd.coolplugin \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket/www \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket/www/socket.js \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.matd.coolplugin/www \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.matd.coolplugin/www/CoolPlugin.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ProgressEvent.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js \

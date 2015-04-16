@@ -152,13 +152,21 @@ module.exports = [
             "cordova"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/com.matd.coolplugin/www/CoolPlugin.js",
+        "id": "com.matd.coolplugin.CoolPlugin",
+        "clobbers": [
+            "CoolPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "com.tlantic.plugins.socket": "0.3.0",
-    "org.apache.cordova.file": "1.3.4-dev"
+    "org.apache.cordova.file": "1.3.4-dev",
+    "com.matd.coolplugin": "0.2.11"
 }
 // BOTTOM OF METADATA
 });

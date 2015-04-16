@@ -15,6 +15,10 @@
                         {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CoolPlugin\"><param name=\"android-package\" value=\"CoolPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -43,6 +47,9 @@
         },
         "org.apache.cordova.file": {
             "PACKAGE_NAME": "com.tlantic.socketdemo"
+        },
+        "com.matd.coolplugin": {
+            "PACKAGE_NAME": "tcpsockettest.mmcomp.com"
         }
     },
     "dependent_plugins": {}
