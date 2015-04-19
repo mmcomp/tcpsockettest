@@ -2,7 +2,13 @@
     "com.matd.coolplugin": {
         "source": {
             "type": "local",
-            "path": "/home/mehrdad/and_prj/plugins/CoolPlugin"
+            "path": "../plugins/CoolPlugin"
+        }
+    },
+    "com.mmcomp.bytesocketclientplugin": {
+        "source": {
+            "type": "local",
+            "path": "../plugins/ByteSocketClientPlugin"
         }
     }
 }

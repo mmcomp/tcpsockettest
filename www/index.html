@@ -63,7 +63,7 @@
                                             <input style="direction: ltr" type="text" id="port" value="4514" >
                                         </div>
                                     </li>
-                                    <li>
+                                    <li style="display:none;" >
                                         <div class="item-inner" >
                                             <button onclick="connect()">Connect</button>
                                             <button onclick="disconnectAll()">DisconnectAll</button>
@@ -128,7 +128,7 @@
                                     </li>
                                     <li>
                                         <div class="item-inner" >
-                                            <button onclick="CoolPlugin.showToast('salam');">تست</button>
+                                            <button onclick="ByteSocketClientPlugin.sendStringByteAsArray('65,78');">تست</button>
                                         </div>
                                     </li>
                                 </ul>
@@ -147,6 +147,5 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/framework7.min.js"></script>
-        <script type="text/javascript" src="js/CoolPlugin.js"></script>
     </body>
 </html>

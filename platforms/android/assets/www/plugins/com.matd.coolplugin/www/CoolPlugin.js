@@ -1,17 +1,12 @@
 cordova.define("com.matd.coolplugin.CoolPlugin", function(require, exports, module) { var exec = require('cordova/exec');
 function CoolPlugin() { 
-	console.log("CoolPlugin.js: is created");
+	//console.log("CoolPlugin.js: is created");
 }
-CoolPlugin.prototype.showToast = function(aString){ 
-	console.log("CoolPlugin.js: showToast"); 
-	exec(function(result){
-		/*alert("OK" + reply);*/
-	}, function(result){
-		/*alert("Error" + reply);*/
-	} ,"CoolPlugin",aString,[]);
+CoolPlugin.prototype.send = function(aString,ip,port,successC){ 
+	//console.log("CoolPlugin.js: showToast"); 
+	exec(function(result){ successC(result); },function(result){} ,"CoolPlugin",'send,'+ip+','+port+','+aString,[]);
 }
-var CoolPlugin = new CoolPlugin(); 
-module.exports = CoolPlugin;
-
+var coolPlugin = new CoolPlugin(); 
+module.exports = coolPlugin;
 
 });

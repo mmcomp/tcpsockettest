@@ -1,5 +1,6 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes.dex : \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/CoolPlugin$ClientThread.class \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/ByteSocketClientPlugin$ClientThread.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/com/tlantic/plugins/socket/Connection.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/com/tlantic/plugins/socket/SocketPlugin.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/com/tlantic/plugins/socket/SocketPlugin$1.class \
@@ -10,6 +11,8 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/com/tlantic/socketdemo/R$drawable.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/com/tlantic/socketdemo/R$string.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/com/tlantic/socketdemo/SocketDemoApp.class \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/ByteSocketClientPlugin$IOClass.class \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/CoolPlugin$ClientThread$1.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/org/apache/cordova/file/FileHelper.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/org/apache/cordova/file/NoModificationAllowedException.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/org/apache/cordova/file/FileUtils$16.class \
@@ -54,7 +57,8 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/org/apache/cordova/file/FileUtils$9.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/CoolPlugin.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/CoolPlugin$IOClass.class \
-/home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/IOClass.class \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/CoolPlugin$ClientThread$2.class \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/ByteSocketClientPlugin$1.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/CoolPlugin$1.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/tcpsockettest/mmcomp/com/R$xml.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/tcpsockettest/mmcomp/com/R$attr.class \
@@ -63,4 +67,5 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/tcpsockettest/mmcomp/com/R$drawable.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/tcpsockettest/mmcomp/com/R$string.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/tcpsockettest/mmcomp/com/SocketDemoApp.class \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/ByteSocketClientPlugin.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/dexedLibs/classes-93dde63a0c41c3fdd1f7691a75609201.jar \

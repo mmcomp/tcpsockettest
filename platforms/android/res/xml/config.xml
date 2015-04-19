@@ -11,6 +11,9 @@
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="ByteSocketClientPlugin">
+        <param name="android-package" value="ByteSocketClientPlugin" />
+    </feature>
     <feature name="CoolPlugin">
         <param name="android-package" value="CoolPlugin" />
     </feature>

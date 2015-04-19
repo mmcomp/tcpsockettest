@@ -17,6 +17,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"ByteSocketClientPlugin\"><param name=\"android-package\" value=\"ByteSocketClientPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"CoolPlugin\"><param name=\"android-package\" value=\"CoolPlugin\" /></feature>",
                             "count": 1
                         }
@@ -47,6 +51,9 @@
         },
         "org.apache.cordova.file": {
             "PACKAGE_NAME": "com.tlantic.socketdemo"
+        },
+        "com.mmcomp.bytesocketclientplugin": {
+            "PACKAGE_NAME": "tcpsockettest.mmcomp.com"
         },
         "com.matd.coolplugin": {
             "PACKAGE_NAME": "tcpsockettest.mmcomp.com"
