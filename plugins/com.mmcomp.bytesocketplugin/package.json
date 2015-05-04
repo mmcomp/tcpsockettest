@@ -1,8 +1,8 @@
 {
     "version": "0.1",
-    "name": "com.mmcomp.bytesocketclientplugin",
-    "cordova_name": "Bytes Socket Client Plugin",
-    "description": "Bytes Socket Client Plugin",
+    "name": "com.mmcomp.bytesocketplugin",
+    "cordova_name": "ByteSocketPlugin",
+    "description": "Byte Socket Plugin",
     "license": "Apache 2.0",
     "repo": "",
     "issue": "",

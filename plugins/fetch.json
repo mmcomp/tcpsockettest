@@ -10,5 +10,18 @@
             "type": "local",
             "path": "../plugins/ByteSocketClientPlugin"
         }
+    },
+    "com.ubookr.plugins.calllog": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dalyc/Cordova-CallLog-Plugin",
+            "subdir": "."
+        }
+    },
+    "com.mmcomp.bytesocketplugin": {
+        "source": {
+            "type": "local",
+            "path": "../plugins/ByteSocketPlugin"
+        }
     }
 }

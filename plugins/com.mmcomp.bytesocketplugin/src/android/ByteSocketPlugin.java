@@ -15,8 +15,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import android.content.Context;
-public class CoolPlugin extends CordovaPlugin {
-	public static final String TAG = "Cool Plugin";
+public class ByteSocketPlugin extends CordovaPlugin {
 	public static IOClass ioclass;
 	public static Boolean writeLogs = true; 
 	public static String sent="";
@@ -32,7 +31,7 @@ public class CoolPlugin extends CordovaPlugin {
 /**
 * Constructor.
 */
-	public CoolPlugin() {
+	public ByteSocketPlugin() {
 	}
 /**
 * Sets the context of the Command. This can then be used to do things like
@@ -43,26 +42,13 @@ public class CoolPlugin extends CordovaPlugin {
 */
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
-		//ioclass = new IOClass(SERVER_IP,SERVERPORT);
-		Log.v(TAG,"Init CoolPlugin");
-	}
-	public void sendDone()
-	{
-		final int duration = Toast.LENGTH_SHORT;
-		Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), "Send Done", duration);
-		toast.show();		
 	}
 	public boolean execute(final String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-		final int duration = Toast.LENGTH_SHORT;
 		cl = callbackContext;
-		// Shows a toast
-		Log.v(TAG,"CoolPlugin received:"+ action);
 		cordova.getActivity().runOnUiThread(new Runnable() {
 			public void run() {
 				doConnect = false;
 				String[] tmp = action.split(",");
-				//Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), String.valueOf(tmp[0].equals("send"))+","+tmp[0], duration);
-				//toast.show();
 				if(tmp[0].equals("send") && tmp.length>1)
 				{
 					ioclass = new IOClass(tmp[1],Integer.valueOf(tmp[2]));
@@ -173,7 +159,7 @@ public class CoolPlugin extends CordovaPlugin {
 		}
 		public String sendSimpleData(int[] b)
 		{
-			byte[] tmp_sts = new byte[1];
+			byte[] tmp_sts = new byte[100];
 			String tmp_sts_str = "";
 			try {
 
@@ -183,12 +169,9 @@ public class CoolPlugin extends CordovaPlugin {
 				DataOutputStream outToServer = new DataOutputStream(socket.getOutputStream());
 				DataInputStream inFromServer = new DataInputStream(socket.getInputStream());
 				outToServer.write(bb);
-				int nread;
-				while ((nread = inFromServer.read(tmp_sts)) >= 0) {
-					//int intt = (int)tmp_sts[0];
-					//tmp_sts_str += new String(new byte[] { tmp_sts[0] });
-					tmp_sts_str += ((tmp_sts_str.equals(""))?"":",")+String.valueOf(tmp_sts[0]);
-				}
+				inFromServer.read(tmp_sts);
+				for(int i = 0;i < 100;i++)
+					tmp_sts_str += ((tmp_sts_str.equals(""))?"":",")+String.valueOf(tmp_sts[i]);
 
 			} catch (IOException e) {
 				connected = false;

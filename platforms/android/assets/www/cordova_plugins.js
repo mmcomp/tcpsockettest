@@ -154,17 +154,10 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/com.mmcomp.bytesocketclientplugin/www/ByteSocketClientPlugin.js",
-        "id": "com.mmcomp.bytesocketclientplugin.ByteSocketClientPlugin",
+        "file": "plugins/com.mmcomp.bytesocketplugin/www/ByteSocketPlugin.js",
+        "id": "com.mmcomp.bytesocketplugin.ByteSocketPlugin",
         "clobbers": [
-            "ByteSocketClientPlugin"
-        ]
-    },
-    {
-        "file": "plugins/com.matd.coolplugin/www/CoolPlugin.js",
-        "id": "com.matd.coolplugin.CoolPlugin",
-        "clobbers": [
-            "CoolPlugin"
+            "ByteSocketPlugin"
         ]
     }
 ];
@@ -173,8 +166,7 @@ module.exports.metadata =
 {
     "com.tlantic.plugins.socket": "0.3.0",
     "org.apache.cordova.file": "1.3.4-dev",
-    "com.mmcomp.bytesocketclientplugin": "0.0.1",
-    "com.matd.coolplugin": "0.2.11"
+    "com.mmcomp.bytesocketplugin": "0.2.11"
 }
 // BOTTOM OF METADATA
 });

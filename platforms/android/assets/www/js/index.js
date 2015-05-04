@@ -5,9 +5,10 @@ var host = "192.168.2.104",
     data = "-- data to be sent --",
     key = "",
     port = 8124;
-            
+var CoolPlugin;            
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady(){
+    CoolPlugin = ByteSocketPlugin;
     myApp=new Framework7();
     $$=Dom7;
     mainView=myApp.addView('.view-main',{dynamicNavbar:true});
@@ -201,7 +202,13 @@ function send(id) {
             if($("#saveinfile").val()==='1')
 		saveToFile(res.split('|')[1]);
             else
-               $("#repon").html(res.split('|')[1]);
+            {   
+                $("#repon").html(''); 
+                var tt = res.split('|')[1].split(',');
+                for(var i=0;i<tt.length;i++)
+                    $("#repon").append( decimalToHexString(parseInt(tt[i],10))+(( i>0 && i%16===0)?'<br/>':''));  
+                    
+           }   
 
         }
         else
@@ -256,4 +263,13 @@ function setHost()
 		host = $("#host").val().trim();
 	if($("#port").val().trim()!=='')
 		port = $("#port").val().trim();
+}
+function decimalToHexString(number)
+{
+    if (number < 0)
+    {
+    	number = 0xFFFFFFFF + number + 1;
+    }
+
+    return number.toString(16).toUpperCase();
 }

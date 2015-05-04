@@ -24,13 +24,12 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/index.css \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/framework7.rtl.min.css \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket \
-/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.matd.coolplugin \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.mmcomp.bytesocketplugin \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file \
-/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.mmcomp.bytesocketclientplugin \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket/www \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket/www/socket.js \
-/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.matd.coolplugin/www \
-/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.matd.coolplugin/www/CoolPlugin.js \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.mmcomp.bytesocketplugin/www \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.mmcomp.bytesocketplugin/www/ByteSocketPlugin.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ProgressEvent.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js \
@@ -54,8 +53,6 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www/fileSystems-roots.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/org.apache.cordova.file/www/android/FileSystem.js \
-/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.mmcomp.bytesocketclientplugin/www \
-/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.mmcomp.bytesocketclientplugin/www/ByteSocketClientPlugin.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/index.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/jquery-2.1.3.min.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/framework7.min.js \
