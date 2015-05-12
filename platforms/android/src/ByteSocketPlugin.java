@@ -28,6 +28,7 @@ public class ByteSocketPlugin extends CordovaPlugin {
 	public static Boolean doConnect = true;
 	public static String rec_data = "";
 	public static CallbackContext cl;
+	public static int recByteCount = 100;
 /**
 * Constructor.
 */
@@ -51,17 +52,21 @@ public class ByteSocketPlugin extends CordovaPlugin {
 				String[] tmp = action.split(",");
 				if(tmp[0].equals("send") && tmp.length>1)
 				{
+					if(tmp.length>=5 && Integer.valueOf(tmp[4])>=0)
+						recByteCount = Integer.valueOf(tmp[4]);
 					ioclass = new IOClass(tmp[1],Integer.valueOf(tmp[2]));
-					b = new int[tmp.length-3];
-					for(int i = 3;i < tmp.length;i++)
+					b = new int[tmp.length-4];
+					for(int i = 3;i < tmp.length-1;i++)
 						b[i-3] = Integer.valueOf(tmp[i]);
 					new Thread(new ClientThread()).start();
 				}
+				/*
 				else if(tmp[0].equals("send") && tmp.length==3)
 				{
 					ioclass = new IOClass(tmp[1],Integer.valueOf(tmp[2]));
 					new Thread(new ClientThread()).start();
 				}
+				*/
 			}
 		});
 		return true;
@@ -159,7 +164,7 @@ public class ByteSocketPlugin extends CordovaPlugin {
 		}
 		public String sendSimpleData(int[] b)
 		{
-			byte[] tmp_sts = new byte[100];
+			byte[] tmp_sts = new byte[recByteCount];
 			String tmp_sts_str = "";
 			try {
 
@@ -170,9 +175,8 @@ public class ByteSocketPlugin extends CordovaPlugin {
 				DataInputStream inFromServer = new DataInputStream(socket.getInputStream());
 				outToServer.write(bb);
 				inFromServer.read(tmp_sts);
-				for(int i = 0;i < 100;i++)
+				for(int i = 0;i < recByteCount;i++)
 					tmp_sts_str += ((tmp_sts_str.equals(""))?"":",")+String.valueOf(tmp_sts[i]);
-
 			} catch (IOException e) {
 				connected = false;
 				SockError = "SendData() IOException : "+e.getMessage();

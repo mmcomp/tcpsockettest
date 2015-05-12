@@ -7,13 +7,32 @@ var host = "192.168.2.104",
     port = 8124;
 var CoolPlugin;            
 document.addEventListener('deviceready', onDeviceReady, false);
+document.addEventListener("backbutton", backPress, false);
+function backPress(e)
+{
+    if(mainView.activePage.name==='index')
+       exitApp();
+    else
+        mainView.goBack();   
+}
+function exitApp()
+{
+    myApp.confirm('آیا مایل به خروج هستید؟' ,'خروج',
+        function () {
+            navigator.app.exitApp();
+        }
+    );
+}
 function onDeviceReady(){
     CoolPlugin = ByteSocketPlugin;
     myApp=new Framework7();
     $$=Dom7;
     mainView=myApp.addView('.view-main',{dynamicNavbar:true});
     myApp.onPageInit('index',function(page){
-       console.log('index init');
+       
+    });
+    myApp.onPageInit('CMDMRFI',function(page){
+       CMDMRFI();
     });
 }
 function readFromFile(fn){
@@ -141,7 +160,7 @@ function newSend(dt)
     var tt='';
     for(var i=0;i<dt.length;i++)
         tt+= (tt===''?'':',')+dt[i];
-    CoolPlugin.send(tt,ip,port,function(res){
+    CoolPlugin.send(tt,ip,port,-1,function(res){
         console.log(res);
         if(res.split('|')[0]==='true')
         {
@@ -193,7 +212,7 @@ function send(id) {
     var ip =$("#host").val().trim();
     var port = $("#port").val().trim();
     //window.tlantic.plugins.socket.send(stub, stub, key, data);
-    CoolPlugin.send(data,ip,port,function(res){
+    CoolPlugin.send(data,ip,port,-1,function(res){
         console.log(res);
         if(res.split('|')[0]==='true')
         {
@@ -272,4 +291,26 @@ function decimalToHexString(number)
     }
 
     return number.toString(16).toUpperCase();
+}
+function stringToAscii(inp)
+{
+    var out='';
+    for(var i=0;i<inp.length;i++)
+    {
+        out+= ((out==='')?'':',')+inp[i].charCodeAt();
+    }
+    return(out);
+}
+function inToString(inp)
+{
+    out='';
+    var tmp = inp.split(',');
+    for(var i=0;i<tmp.length;i++)
+    {
+        if(tmp[i]!=='0')
+        {
+            out+= String.fromCharCode(tmp[i]);
+        }    
+    }
+    return (out);
 }

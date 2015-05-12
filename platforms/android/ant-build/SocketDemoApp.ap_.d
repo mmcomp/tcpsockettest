@@ -19,9 +19,13 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/cordova.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/index.html \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/CMDMRFI.html \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/framework7.themes.css \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/framework7.min_1.css \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/framework7.themes_1.css \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/framework7.min.css \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/index.css \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/framework7.rtl.min_1.css \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/css/framework7.rtl.min.css \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.tlantic.plugins.socket \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/plugins/com.mmcomp.bytesocketplugin \
@@ -56,5 +60,7 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/index.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/jquery-2.1.3.min.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/framework7.min.js \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/framework7.min_1.js \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/CMDMRFI.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/assets/www/js/db.js \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/AndroidManifest.xml \

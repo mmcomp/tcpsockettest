@@ -11,6 +11,7 @@
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/com/tlantic/socketdemo/SocketDemoApp.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/ByteSocketPlugin.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/ByteSocketPlugin$IOClass.class \
+/home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/ByteSocketPlugin$1$1.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/ByteSocketPlugin$ClientThread$2.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/org/apache/cordova/file/FileHelper.class \
 /home/mehrdad/and_prj/tcpsockettest/platforms/android/ant-build/classes/org/apache/cordova/file/NoModificationAllowedException.class \
