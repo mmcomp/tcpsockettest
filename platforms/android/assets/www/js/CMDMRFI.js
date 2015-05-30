@@ -42,11 +42,18 @@ function isComunicate()
             }
             else if(input_str==='Switch ON')
             {
-                console.log('Switch onnnnnn');
+                openNot('لطفا سوئیچ را ببندید');
+                if(continue_loop)
+                    isComunicate();
+                else
+                {
+                    continue_loop = true;
+                    sendXX();
+                }
             }
             else if(input_str==='Error Read Unit')
             {
-                console.log('Erro Read unit');
+                openNot('خطا در برقراری ارتباط با یونیت');
             }
         }   
     });
